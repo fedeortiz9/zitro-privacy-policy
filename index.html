@@ -1,219 +1,523 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad — Zitro Network</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
-        .container { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
-        h1 { font-size: 2rem; color: #dcfc04; margin-bottom: 8px; }
-        h2 { font-size: 1.2rem; color: #dcfc04; margin: 32px 0 12px; border-left: 3px solid #dcfc04; padding-left: 12px; }
-        p, li { font-size: 0.95rem; color: #ccc; margin-bottom: 8px; }
-        ul { padding-left: 20px; margin-bottom: 12px; }
-        .subtitle { color: #888; font-size: 0.85rem; margin-bottom: 40px; }
-        .lang-switch { text-align: right; margin-bottom: 24px; }
-        .lang-switch a { color: #dcfc04; text-decoration: none; font-size: 0.9rem; border: 1px solid #dcfc04; padding: 6px 14px; border-radius: 20px; }
-        .section-en { display: none; }
-        .highlight { color: #dcfc04; font-weight: 600; }
-        hr { border: none; border-top: 1px solid #222; margin: 40px 0; }
-        .footer { text-align: center; color: #555; font-size: 0.8rem; margin-top: 40px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Politica de Privacidad — Zitro Network</title>
+<style>
+:root {
+  --bg: #0D0D0F;
+  --surface: #1A1A1F;
+  --text: #E8E8ED;
+  --text-secondary: #8E8E93;
+  --text-tertiary: #636366;
+  --border: #2C2C2E;
+  --accent: #00C853;
+  --font: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+header {
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+header p {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+.lang-switch {
+  display: inline-flex;
+  gap: 0;
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.lang-switch button {
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  padding: 5px 14px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.lang-switch button.active {
+  background: var(--surface);
+  color: var(--text);
+}
+nav.toc {
+  margin-bottom: 40px;
+}
+nav.toc h2 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+nav.toc ol {
+  list-style: none;
+  padding: 0;
+}
+nav.toc li {
+  margin-bottom: 2px;
+}
+nav.toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px 0;
+  display: block;
+}
+section {
+  margin-bottom: 40px;
+}
+section h2 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+  scroll-margin-top: 16px;
+}
+section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 20px 0 8px;
+}
+section p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+section ul, section ol {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+section li {
+  margin-bottom: 6px;
+  color: var(--text);
+}
+a { color: var(--accent); text-decoration: none; }
+.note {
+  background: var(--surface);
+  border-left: 2px solid var(--border);
+  padding: 12px 16px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-radius: 0 4px 4px 0;
+}
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+footer p { margin-bottom: 4px; }
+@media print {
+  body { background: #fff; color: #111; }
+  header h1, section h2, section h3 { color: #111; }
+  .lang-switch { display: none; }
+  .note { border-color: #ccc; }
+  a { color: #111; }
+}
+.lang-en { display: none; }
+</style>
 </head>
 <body>
 <div class="container">
 
-    <div class="lang-switch">
-        <a href="#" onclick="toggleLang(); return false;" id="lang-btn">🇬🇧 English</a>
-    </div>
+<header>
+  <h1>Politica de Privacidad</h1>
+  <p>Zitro Network &middot; Ultima actualizacion: 30 de junio de 2026</p>
+  <div class="lang-switch">
+    <button class="active" onclick="setLang('es')">ES</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
+</header>
 
-    <!-- ESPAÑOL -->
-    <div class="section-es" id="section-es">
-        <h1>Política de Privacidad</h1>
-        <p class="subtitle">Zitro Network · Última actualización: junio de 2026</p>
+<div class="lang-es">
 
-        <h2>1. Quiénes somos</h2>
-        <p>Zitro Network es una plataforma de minería de tokens en la nube. Los tokens minados corren sobre la red BNB (Binance Smart Chain). La minería se ejecuta en nuestros servidores — no consume recursos del dispositivo del usuario.</p>
+<nav class="toc">
+  <h2>Contenido</h2>
+  <ol>
+    <li><a href="#es-1">1. Responsable del tratamiento</a></li>
+    <li><a href="#es-2">2. Datos que recopilamos</a></li>
+    <li><a href="#es-3">3. Base legal y finalidad</a></li>
+    <li><a href="#es-4">4. Modelo no custodial</a></li>
+    <li><a href="#es-5">5. Comparticion con terceros</a></li>
+    <li><a href="#es-6">6. Transferencias internacionales</a></li>
+    <li><a href="#es-7">7. Retencion de datos</a></li>
+    <li><a href="#es-8">8. Seguridad</a></li>
+    <li><a href="#es-9">9. Tus derechos (GDPR / CCPA)</a></li>
+    <li><a href="#es-10">10. Menores de edad</a></li>
+    <li><a href="#es-11">11. Cookies y tecnologias similares</a></li>
+    <li><a href="#es-12">12. Cambios en esta politica</a></li>
+    <li><a href="#es-13">13. Contacto</a></li>
+  </ol>
+</nav>
 
-        <h2>2. Datos que recopilamos</h2>
-        <ul>
-            <li><span class="highlight">Cuenta:</span> dirección de correo electrónico, nombre de usuario y contraseña (almacenada con hash bcrypt).</li>
-            <li><span class="highlight">Verificación OTP:</span> código de un solo uso enviado al email para confirmar la cuenta y el inicio de sesión.</li>
-            <li><span class="highlight">Actividad de minería:</span> sesiones de minería, recompensas acumuladas y código de referido.</li>
-            <li><span class="highlight">Notificaciones:</span> token FCM del dispositivo para enviar alertas de minería y referidos.</li>
-            <li><span class="highlight">Publicidad:</span> Advertising ID del dispositivo, usado por Google AdMob para mostrar anuncios recompensados. El usuario debe ver un anuncio para iniciar cada sesión de minería.</li>
-            <li><span class="highlight">Información del dispositivo:</span> sistema operativo y versión, para funcionalidad técnica.</li>
-            <li><span class="highlight">Academia:</span> progreso en cursos educativos de trading (videos de YouTube).</li>
-        </ul>
+<section>
+  <h2 id="es-1">1. Responsable del tratamiento</h2>
+  <p>Zitro Network es responsable del tratamiento de los datos personales recabados a traves de la aplicacion movil Zitro Network y los servicios asociados.</p>
+  <p>Para cualquier consulta relacionada con privacidad, puedes contactarnos en <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>.</p>
+</section>
 
-        <h2>3. Datos que NO recopilamos</h2>
-        <ul>
-            <li>No recopilamos datos bancarios, tarjetas de crédito ni información financiera.</li>
-            <li>No permitimos depósitos, retiros ni transferencias de dinero real.</li>
-            <li>No recopilamos ubicación GPS.</li>
-            <li>No accedemos a contactos, cámara ni micrófono (salvo futura verificación KYC, con consentimiento explícito).</li>
-        </ul>
+<section>
+  <h2 id="es-2">2. Datos que recopilamos</h2>
+  <h3>2.1 Datos proporcionados por el usuario</h3>
+  <ul>
+    <li>Nombre, apellido, nombre de usuario y direccion de correo electronico (obtenidos mediante Google Sign-In)</li>
+    <li>Foto de perfil (opcional, subida por el usuario)</li>
+    <li>Pais de residencia y numero de telefono (opcionales)</li>
+    <li>Codigo de referido utilizado al registrarse</li>
+  </ul>
+  <h3>2.2 Datos generados por el uso del servicio</h3>
+  <ul>
+    <li>Identificador interno de cuenta (UUID e ID numerico)</li>
+    <li>Estado de la cuenta (activo, suspendido, baneado)</li>
+    <li>Estadisticas de mineria en la nube por celulares moviles (que no afecta ni consume recursos de tu dispositivo) (balance de tokens ZITRO, tasa de minado)</li>
+    <li>Progreso en la academia y preferencias de idioma</li>
+    <li>Tokens de notificaciones push (Firebase Cloud Messaging)</li>
+    <li>Codigo de referido propio y registro de referidos realizados</li>
+  </ul>
+  <h3>2.3 Datos de billetera Web3</h3>
+  <ul>
+    <li>Direccion publica de billetera vinculada mediante firma criptografica SIWE</li>
+  </ul>
+  <div class="note">Zitro Network no recopila contrasenas. La autenticacion se realiza exclusivamente a traves de Google Sign-In (OAuth 2.0). Tampoco almacenamos claves privadas, frases semilla ni credenciales de billetera.</div>
+</section>
 
-        <h2>4. Cómo usamos los datos</h2>
-        <ul>
-            <li>Crear y gestionar su cuenta de usuario.</li>
-            <li>Ejecutar sesiones de minería en la nube y acreditar recompensas.</li>
-            <li>Enviar notificaciones push sobre el estado de la minería.</li>
-            <li>Mostrar anuncios recompensados a través de Google AdMob.</li>
-            <li>Gestionar el sistema de referidos.</li>
-            <li>Proveer contenido educativo de trading.</li>
-        </ul>
+<section>
+  <h2 id="es-3">3. Base legal y finalidad</h2>
+  <p>Tratamos tus datos personales conforme a las siguientes bases legales:</p>
+  <ul>
+    <li>Ejecucion contractual: para prestar el servicio de mineria en la nube por celulares moviles (que no afecta ni consume recursos de tu dispositivo), gestionar tu cuenta y procesar bonificaciones de referidos.</li>
+    <li>Consentimiento: para el envio de notificaciones push y comunicaciones de marketing.</li>
+    <li>Interes legitimo: para detectar fraude, prevenir abusos (multi-accounting, farming) y mejorar la seguridad de la plataforma.</li>
+    <li>Obligacion legal: para cumplir con requerimientos normativos aplicables.</li>
+  </ul>
+</section>
 
-        <h2>5. Base legal</h2>
-        <p>El tratamiento de datos se basa en el consentimiento del usuario al registrarse y en el interés legítimo de operar la plataforma. El usuario puede retirar su consentimiento en cualquier momento eliminando su cuenta.</p>
+<section>
+  <h2 id="es-4">4. Modelo no custodial</h2>
+  <p>Zitro Network opera bajo un modelo estrictamente no custodial en lo que respecta a la integracion de billetera Web3:</p>
+  <ul>
+    <li>Solo almacenamos la direccion publica de tu billetera, vinculada mediante firma criptografica.</li>
+    <li>No almacenamos, accedemos ni procesamos claves privadas, frases semilla ni credenciales de billetera.</li>
+    <li>No tenemos acceso ni control sobre los fondos de tu billetera.</li>
+    <li>Las transacciones blockchain se firman exclusivamente en la billetera externa del usuario (TrustWallet, MetaMask u otra compatible con WalletConnect).</li>
+    <li>Solo consultamos balances publicos en Binance Smart Chain (BNB, USDT, USDC) mediante llamadas de lectura al nodo publico de BSC.</li>
+  </ul>
+</section>
 
-        <h2>6. Compartir datos con terceros</h2>
-        <ul>
-            <li><span class="highlight">Google AdMob:</span> para mostrar anuncios recompensados. Google puede usar el Advertising ID conforme a su propia política de privacidad.</li>
-            <li><span class="highlight">Firebase (Google):</span> para notificaciones push (FCM).</li>
-            <li>No vendemos datos a terceros.</li>
-            <li>No compartimos datos con fines de marketing de terceros.</li>
-        </ul>
+<section>
+  <h2 id="es-5">5. Comparticion con terceros</h2>
+  <p>Compartimos datos personales unicamente con los siguientes proveedores, en la medida necesaria para operar el servicio:</p>
+  <ul>
+    <li>Google (autenticacion mediante Google Sign-In)</li>
+    <li>Firebase / Google Cloud (notificaciones push, infraestructura)</li>
+    <li>WalletConnect / Reown (protocolo de conexion de billetera; solo se transmite la direccion publica)</li>
+    <li>Binance Smart Chain (lectura de balances publicos on-chain)</li>
+  </ul>
+  <p>No vendemos, alquilamos ni compartimos datos personales con terceros con fines publicitarios ni de marketing.</p>
+</section>
 
-        <h2>7. Retención de datos</h2>
-        <p>Los datos se conservan mientras la cuenta esté activa. Al eliminar la cuenta, los datos personales se borran en un plazo de 30 días, salvo obligación legal.</p>
+<section>
+  <h2 id="es-6">6. Transferencias internacionales</h2>
+  <p>Tus datos pueden transferirse y almacenarse en servidores ubicados fuera de tu pais de residencia. Cuando esto ocurra, nos aseguraremos de que existan salvaguardas adecuadas conforme al GDPR, como clausulas contractuales tipo de la Comision Europea o decisiones de adecuacion.</p>
+</section>
 
-        <h2>8. Seguridad</h2>
-        <ul>
-            <li>Contraseñas almacenadas con hash bcrypt.</li>
-            <li>Autenticación de dos factores (OTP por email).</li>
-            <li>Tokens JWT con expiración de 7 días.</li>
-            <li>Comunicaciones cifradas mediante HTTPS/TLS.</li>
-        </ul>
+<section>
+  <h2 id="es-7">7. Retencion de datos</h2>
+  <p>Conservamos tus datos personales mientras tu cuenta permanezca activa. Tras la eliminacion de la cuenta:</p>
+  <ul>
+    <li>Los datos personales se eliminan en un plazo maximo de 30 dias.</li>
+    <li>Registros anonimizados con fines estadisticos pueden conservarse indefinidamente.</li>
+    <li>Los datos necesarios para cumplir obligaciones legales se conservan durante el plazo legalmente establecido.</li>
+  </ul>
+</section>
 
-        <h2>9. Menores de edad</h2>
-        <p>Zitro Network está dirigida a usuarios <span class="highlight">mayores de 18 años</span>. No recopilamos intencionadamente datos de menores. Los usuarios menores de 18 años no podrán retirar tokens cuando esta funcionalidad esté disponible. Si detectamos una cuenta de un menor, la eliminaremos.</p>
+<section>
+  <h2 id="es-8">8. Seguridad</h2>
+  <p>Implementamos medidas tecnicas y organizativas para proteger tus datos personales:</p>
+  <ul>
+    <li>Comunicaciones cifradas mediante HTTPS/TLS en todas las conexiones.</li>
+    <li>Autenticacion delegada a Google OAuth 2.0 (no almacenamos contrasenas).</li>
+    <li>Autorizacion mediante tokens JWT con expiracion controlada.</li>
+    <li>Firma HMAC en endpoints criticos.</li>
+    <li>Vinculacion de billetera mediante firma criptografica SIWE, verificada en el servidor.</li>
+    <li>Infraestructura con acceso restringido y monitoreado.</li>
+  </ul>
+</section>
 
-        <h2>10. Verificación KYC (futura)</h2>
-        <p>En el futuro implementaremos verificación de identidad (KYC) que incluirá fotografía, documento de identidad y verificación de domicilio. Esta funcionalidad solicitará consentimiento explícito y estará sujeta a una política específica en el momento de su lanzamiento.</p>
+<section>
+  <h2 id="es-9">9. Tus derechos (GDPR / CCPA)</h2>
+  <h3>9.1 Derechos conforme al GDPR (usuarios de la UE/EEE)</h3>
+  <ul>
+    <li>Acceso: solicitar una copia de tus datos personales.</li>
+    <li>Rectificacion: corregir datos inexactos o incompletos.</li>
+    <li>Supresion: solicitar la eliminacion de tus datos.</li>
+    <li>Limitacion: restringir el tratamiento en determinadas circunstancias.</li>
+    <li>Portabilidad: recibir tus datos en formato estructurado y legible por maquina.</li>
+    <li>Oposicion: oponerte al tratamiento basado en interes legitimo.</li>
+    <li>Retiro del consentimiento: en cualquier momento, sin efecto retroactivo.</li>
+  </ul>
+  <h3>9.2 Derechos conforme a la CCPA (residentes de California)</h3>
+  <ul>
+    <li>Derecho a saber que datos personales recopilamos y como los utilizamos.</li>
+    <li>Derecho a solicitar la eliminacion de tus datos personales.</li>
+    <li>Derecho a la no discriminacion por ejercer tus derechos de privacidad.</li>
+    <li>No vendemos datos personales conforme a la definicion de la CCPA.</li>
+  </ul>
+  <p>Para ejercer cualquiera de estos derechos, contacta a <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>. Responderemos en un plazo maximo de 30 dias.</p>
+</section>
 
-        <h2>11. Sus derechos</h2>
-        <ul>
-            <li><span class="highlight">Acceso:</span> puede solicitar una copia de sus datos.</li>
-            <li><span class="highlight">Rectificación:</span> puede corregir datos incorrectos desde la app.</li>
-            <li><span class="highlight">Eliminación:</span> puede solicitar la eliminación de su cuenta y datos.</li>
-            <li><span class="highlight">Portabilidad:</span> puede solicitar sus datos en formato legible.</li>
-            <li><span class="highlight">Oposición:</span> puede oponerse al uso de su Advertising ID para publicidad personalizada en los ajustes del dispositivo.</li>
-        </ul>
+<section>
+  <h2 id="es-10">10. Menores de edad</h2>
+  <p>Zitro Network no esta dirigida a menores de 18 anos. No recopilamos intencionalmente datos personales de menores. Si detectamos que un menor se ha registrado, eliminaremos su cuenta y datos asociados.</p>
+</section>
 
-        <h2>12. Idiomas</h2>
-        <p>Esta política está disponible en español, inglés, portugués, mandarín, alemán, francés, urdu y árabe.</p>
+<section>
+  <h2 id="es-11">11. Cookies y tecnologias similares</h2>
+  <p>La aplicacion movil de Zitro Network no utiliza cookies. Utilizamos almacenamiento local del dispositivo unicamente para:</p>
+  <ul>
+    <li>Mantener la sesion del usuario (token JWT).</li>
+    <li>Guardar preferencias de idioma y tema visual.</li>
+  </ul>
+  <p>No utilizamos tecnologias de seguimiento de terceros con fines publicitarios.</p>
+</section>
 
-        <h2>13. Contacto</h2>
-        <p>Para consultas sobre privacidad: <span class="highlight">privacy@zitronetwork.com</span></p>
-        <p>Sitio web: <span class="highlight">https://zitronetwork.com</span></p>
-    </div>
+<section>
+  <h2 id="es-12">12. Cambios en esta politica</h2>
+  <p>Nos reservamos el derecho de actualizar esta politica. En caso de cambios sustanciales, notificaremos a los usuarios mediante la aplicacion. La fecha de ultima actualizacion se revisara en la parte superior. El uso continuado tras la publicacion de cambios constituye aceptacion.</p>
+</section>
 
-    <hr>
+<section>
+  <h2 id="es-13">13. Contacto</h2>
+  <p>Para consultas sobre privacidad o ejercicio de derechos:</p>
+  <ul>
+    <li>Email: <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a></li>
+    <li>Web: <a href="https://zitronetwork.com">zitronetwork.com</a></li>
+  </ul>
+</section>
 
-    <!-- ENGLISH -->
-    <div class="section-en" id="section-en" style="display:none">
-        <h1>Privacy Policy</h1>
-        <p class="subtitle">Zitro Network · Last updated: June 2026</p>
-
-        <h2>1. Who we are</h2>
-        <p>Zitro Network is a cloud-based token mining platform. Mined tokens run on the BNB Network (Binance Smart Chain). Mining is executed on our servers — it does not consume the user's device resources.</p>
-
-        <h2>2. Data we collect</h2>
-        <ul>
-            <li><span class="highlight">Account:</span> email address, username, and password (stored as bcrypt hash).</li>
-            <li><span class="highlight">OTP Verification:</span> one-time code sent to email to verify account and login.</li>
-            <li><span class="highlight">Mining activity:</span> mining sessions, accumulated rewards, and referral code.</li>
-            <li><span class="highlight">Notifications:</span> device FCM token to send mining and referral alerts.</li>
-            <li><span class="highlight">Advertising:</span> device Advertising ID, used by Google AdMob to show rewarded ads. Users must watch an ad to start each mining session.</li>
-            <li><span class="highlight">Device information:</span> operating system and version, for technical functionality.</li>
-            <li><span class="highlight">Academy:</span> progress in educational trading courses (YouTube videos).</li>
-        </ul>
-
-        <h2>3. Data we do NOT collect</h2>
-        <ul>
-            <li>We do not collect banking data, credit cards, or financial information.</li>
-            <li>We do not allow deposits, withdrawals, or real money transfers.</li>
-            <li>We do not collect GPS location.</li>
-            <li>We do not access contacts, camera, or microphone (except future KYC verification, with explicit consent).</li>
-        </ul>
-
-        <h2>4. How we use data</h2>
-        <ul>
-            <li>Create and manage your user account.</li>
-            <li>Run cloud mining sessions and credit rewards.</li>
-            <li>Send push notifications about mining status.</li>
-            <li>Display rewarded ads through Google AdMob.</li>
-            <li>Manage the referral system.</li>
-            <li>Provide educational trading content.</li>
-        </ul>
-
-        <h2>5. Legal basis</h2>
-        <p>Data processing is based on user consent at registration and legitimate interest in operating the platform. Users can withdraw consent at any time by deleting their account.</p>
-
-        <h2>6. Sharing data with third parties</h2>
-        <ul>
-            <li><span class="highlight">Google AdMob:</span> to display rewarded ads. Google may use the Advertising ID per their own privacy policy.</li>
-            <li><span class="highlight">Firebase (Google):</span> for push notifications (FCM).</li>
-            <li>We do not sell data to third parties.</li>
-            <li>We do not share data for third-party marketing purposes.</li>
-        </ul>
-
-        <h2>7. Data retention</h2>
-        <p>Data is retained while the account is active. Upon account deletion, personal data is erased within 30 days, unless legally required otherwise.</p>
-
-        <h2>8. Security</h2>
-        <ul>
-            <li>Passwords stored with bcrypt hash.</li>
-            <li>Two-factor authentication (OTP via email).</li>
-            <li>JWT tokens with 7-day expiration.</li>
-            <li>Encrypted communications via HTTPS/TLS.</li>
-        </ul>
-
-        <h2>9. Minors</h2>
-        <p>Zitro Network is intended for users <span class="highlight">18 years of age or older</span>. We do not intentionally collect data from minors. Users under 18 will not be able to withdraw tokens when this feature becomes available. If we detect a minor's account, we will delete it.</p>
-
-        <h2>10. KYC Verification (future)</h2>
-        <p>In the future we will implement identity verification (KYC) including photograph, identity document, and address verification. This feature will request explicit consent and will be subject to a specific policy at launch.</p>
-
-        <h2>11. Your rights</h2>
-        <ul>
-            <li><span class="highlight">Access:</span> you may request a copy of your data.</li>
-            <li><span class="highlight">Rectification:</span> you may correct incorrect data from within the app.</li>
-            <li><span class="highlight">Deletion:</span> you may request deletion of your account and data.</li>
-            <li><span class="highlight">Portability:</span> you may request your data in a readable format.</li>
-            <li><span class="highlight">Objection:</span> you may opt out of personalized advertising via your device settings.</li>
-        </ul>
-
-        <h2>12. Languages</h2>
-        <p>This policy is available in Spanish, English, Portuguese, Mandarin, German, French, Urdu, and Arabic.</p>
-
-        <h2>13. Contact</h2>
-        <p>Privacy inquiries: <span class="highlight">privacy@zitronetwork.com</span></p>
-        <p>Website: <span class="highlight">https://zitronetwork.com</span></p>
-    </div>
-
-    <div class="footer">
-        <p>© 2026 Zitro Network. All rights reserved.</p>
-    </div>
 </div>
 
+<div class="lang-en">
+
+<nav class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#en-1">1. Data controller</a></li>
+    <li><a href="#en-2">2. Data we collect</a></li>
+    <li><a href="#en-3">3. Legal basis and purpose</a></li>
+    <li><a href="#en-4">4. Non-custodial model</a></li>
+    <li><a href="#en-5">5. Third-party sharing</a></li>
+    <li><a href="#en-6">6. International transfers</a></li>
+    <li><a href="#en-7">7. Data retention</a></li>
+    <li><a href="#en-8">8. Security</a></li>
+    <li><a href="#en-9">9. Your rights (GDPR / CCPA)</a></li>
+    <li><a href="#en-10">10. Children</a></li>
+    <li><a href="#en-11">11. Cookies and similar technologies</a></li>
+    <li><a href="#en-12">12. Changes to this policy</a></li>
+    <li><a href="#en-13">13. Contact</a></li>
+  </ol>
+</nav>
+
+<section>
+  <h2 id="en-1">1. Data controller</h2>
+  <p>Zitro Network is the data controller for personal data collected through the Zitro Network mobile application and associated services.</p>
+  <p>For any privacy-related inquiries, contact us at <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>.</p>
+</section>
+
+<section>
+  <h2 id="en-2">2. Data we collect</h2>
+  <h3>2.1 Data provided by the user</h3>
+  <ul>
+    <li>Name, surname, username, and email address (obtained via Google Sign-In)</li>
+    <li>Profile photo (optional, uploaded by the user)</li>
+    <li>Country of residence and phone number (optional)</li>
+    <li>Referral code used during registration</li>
+  </ul>
+  <h3>2.2 Data generated through service usage</h3>
+  <ul>
+    <li>Internal account identifier (UUID and numeric ID)</li>
+    <li>Account status (active, suspended, banned)</li>
+    <li>Cloud-based mobile mining statistics (ZITRO token balance, mining rate)</li>
+    <li>Academy progress and language preferences</li>
+    <li>Push notification tokens (Firebase Cloud Messaging)</li>
+    <li>Own referral code and referral history</li>
+  </ul>
+  <h3>2.3 Web3 wallet data</h3>
+  <ul>
+    <li>Public wallet address linked via SIWE cryptographic signature</li>
+  </ul>
+  <div class="note">Zitro Network does not collect passwords. Authentication is performed exclusively through Google Sign-In (OAuth 2.0). We do not store private keys, seed phrases, or wallet credentials.</div>
+</section>
+
+<section>
+  <h2 id="en-3">3. Legal basis and purpose</h2>
+  <p>We process your personal data under the following legal bases:</p>
+  <ul>
+    <li>Contractual performance: to provide the cloud-based mobile mining service (which does not affect or consume your device's resources), manage your account, and process referral bonuses.</li>
+    <li>Consent: for sending push notifications and marketing communications.</li>
+    <li>Legitimate interest: to detect fraud, prevent abuse (multi-accounting, farming), and improve platform security.</li>
+    <li>Legal obligation: to comply with applicable regulatory requirements.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="en-4">4. Non-custodial model</h2>
+  <p>Zitro Network operates under a strictly non-custodial model regarding Web3 wallet integration:</p>
+  <ul>
+    <li>We only store your public wallet address, linked via cryptographic signature.</li>
+    <li>We do not store, access, or process private keys, seed phrases, or wallet credentials.</li>
+    <li>We have no access to or control over your wallet funds.</li>
+    <li>Blockchain transactions are signed exclusively in the user's external wallet (TrustWallet, MetaMask, or any WalletConnect-compatible wallet).</li>
+    <li>We only query public balances on Binance Smart Chain (BNB, USDT, USDC) via read calls to the public BSC node.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="en-5">5. Third-party sharing</h2>
+  <p>We share personal data only with the following providers, to the extent necessary to operate the service:</p>
+  <ul>
+    <li>Google (authentication via Google Sign-In)</li>
+    <li>Firebase / Google Cloud (push notifications, infrastructure)</li>
+    <li>WalletConnect / Reown (wallet connection protocol; only the public address is transmitted)</li>
+    <li>Binance Smart Chain (public on-chain balance reads)</li>
+  </ul>
+  <p>We do not sell, rent, or share personal data with third parties for advertising or marketing purposes.</p>
+</section>
+
+<section>
+  <h2 id="en-6">6. International transfers</h2>
+  <p>Your data may be transferred to and stored on servers located outside your country of residence. When this occurs, we ensure adequate safeguards are in place in accordance with the GDPR, such as European Commission standard contractual clauses or adequacy decisions.</p>
+</section>
+
+<section>
+  <h2 id="en-7">7. Data retention</h2>
+  <p>We retain your personal data while your account remains active. After account deletion:</p>
+  <ul>
+    <li>Personal data is deleted within a maximum of 30 days.</li>
+    <li>Anonymized records for statistical purposes may be retained indefinitely.</li>
+    <li>Data required to comply with legal obligations is retained for the legally mandated period.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="en-8">8. Security</h2>
+  <p>We implement technical and organizational measures to protect your personal data:</p>
+  <ul>
+    <li>Encrypted communications via HTTPS/TLS on all connections.</li>
+    <li>Authentication delegated to Google OAuth 2.0 (no passwords stored).</li>
+    <li>Authorization via JWT tokens with controlled expiration.</li>
+    <li>HMAC signing on critical endpoints.</li>
+    <li>Wallet linking via SIWE cryptographic signature, verified server-side.</li>
+    <li>Infrastructure with restricted and monitored access.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="en-9">9. Your rights (GDPR / CCPA)</h2>
+  <h3>9.1 Rights under GDPR (EU/EEA users)</h3>
+  <ul>
+    <li>Access: request a copy of your personal data.</li>
+    <li>Rectification: correct inaccurate or incomplete data.</li>
+    <li>Erasure: request deletion of your data.</li>
+    <li>Restriction: restrict processing under certain circumstances.</li>
+    <li>Portability: receive your data in a structured, machine-readable format.</li>
+    <li>Objection: object to processing based on legitimate interest.</li>
+    <li>Withdrawal of consent: at any time, without retroactive effect.</li>
+  </ul>
+  <h3>9.2 Rights under CCPA (California residents)</h3>
+  <ul>
+    <li>Right to know what personal data we collect and how we use it.</li>
+    <li>Right to request deletion of your personal data.</li>
+    <li>Right to non-discrimination for exercising your privacy rights.</li>
+    <li>We do not sell personal data as defined by the CCPA.</li>
+  </ul>
+  <p>To exercise any of these rights, contact <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>. We will respond within 30 days.</p>
+</section>
+
+<section>
+  <h2 id="en-10">10. Children</h2>
+  <p>Zitro Network is not intended for anyone under the age of 18. We do not knowingly collect personal data from minors. If we become aware that a minor has registered, we will delete their account and associated data.</p>
+</section>
+
+<section>
+  <h2 id="en-11">11. Cookies and similar technologies</h2>
+  <p>The Zitro Network mobile application does not use cookies. We use device local storage solely for:</p>
+  <ul>
+    <li>Maintaining the user session (JWT token).</li>
+    <li>Storing language and visual theme preferences.</li>
+  </ul>
+  <p>We do not use third-party tracking technologies for advertising purposes.</p>
+</section>
+
+<section>
+  <h2 id="en-12">12. Changes to this policy</h2>
+  <p>We reserve the right to update this policy. For material changes, we will notify users through the application. The last updated date will be revised at the top. Continued use after changes are published constitutes acceptance.</p>
+</section>
+
+<section>
+  <h2 id="en-13">13. Contact</h2>
+  <p>For privacy inquiries or to exercise your rights:</p>
+  <ul>
+    <li>Email: <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a></li>
+    <li>Web: <a href="https://zitronetwork.com">zitronetwork.com</a></li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <p>Zitro Network</p>
+  <p>Version 2.0 &middot; 30 de junio de 2026</p>
+</footer>
+
+</div>
 <script>
-    function toggleLang() {
-        const es = document.getElementById('section-es');
-        const en = document.getElementById('section-en');
-        const btn = document.getElementById('lang-btn');
-        if (es.style.display === 'none') {
-            es.style.display = 'block';
-            en.style.display = 'none';
-            btn.textContent = '🇬🇧 English';
-        } else {
-            es.style.display = 'none';
-            en.style.display = 'block';
-            btn.textContent = '🇪🇸 Español';
-        }
-    }
+function setLang(l){
+  document.querySelector('.lang-es').style.display=l==='es'?'block':'none';
+  document.querySelector('.lang-en').style.display=l==='en'?'block':'none';
+  document.querySelectorAll('.lang-switch button').forEach(function(b){b.classList.remove('active')});
+  document.querySelectorAll('.lang-switch button')[l==='es'?0:1].classList.add('active');
+}
 </script>
 </body>
 </html>
