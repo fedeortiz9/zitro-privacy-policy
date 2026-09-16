@@ -162,7 +162,7 @@ footer p { margin-bottom: 4px; }
 
 <header>
   <h1>Politica de Privacidad</h1>
-  <p>Zitro Network &middot; Ultima actualizacion: 30 de junio de 2026</p>
+  <p>Zitro Network &middot; Ultima actualizacion: 16 de septiembre de 2026</p>
   <div class="lang-switch">
     <button class="active" onclick="setLang('es')">ES</button>
     <button onclick="setLang('en')">EN</button>
@@ -193,7 +193,7 @@ footer p { margin-bottom: 4px; }
 <section>
   <h2 id="es-1">1. Responsable del tratamiento</h2>
   <p>Zitro Network es responsable del tratamiento de los datos personales recabados a traves de la aplicacion movil Zitro Network y los servicios asociados.</p>
-  <p>Para cualquier consulta relacionada con privacidad, puedes contactarnos en <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>.</p>
+  <p>Para cualquier consulta relacionada con privacidad, puedes contactarnos en <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>.</p>
 </section>
 
 <section>
@@ -208,16 +208,22 @@ footer p { margin-bottom: 4px; }
   <h3>2.2 Datos generados por el uso del servicio</h3>
   <ul>
     <li>Identificador interno de cuenta (UUID e ID numerico)</li>
+    <li>Identificador de instalacion de la app, generado una vez por dispositivo</li>
     <li>Estado de la cuenta (activo, suspendido, baneado)</li>
-    <li>Estadisticas de mineria en la nube por celulares moviles (que no afecta ni consume recursos de tu dispositivo) (balance de tokens ZITRO, tasa de minado)</li>
+    <li>Balance de tokens ZITRO y tasa de minado en la nube: la mineria corre en nuestros servidores y no consume bateria, procesador ni datos moviles de tu telefono</li>
     <li>Progreso en la academia y preferencias de idioma</li>
-    <li>Tokens de notificaciones push (Firebase Cloud Messaging)</li>
+    <li>Token de notificaciones push (Firebase Cloud Messaging), junto con la plataforma de tu dispositivo (Android o iOS) y el estado del permiso de notificaciones</li>
     <li>Codigo de referido propio y registro de referidos realizados</li>
+    <li>Una senal de integridad del dispositivo (deteccion de root o jailbreak) que usamos para prevenir fraude y abuso de la plataforma</li>
   </ul>
   <h3>2.3 Datos de billetera Web3</h3>
   <ul>
     <li>Direccion publica de billetera vinculada mediante firma criptografica SIWE</li>
   </ul>
+  <h3>2.4 Datos de publicidad</h3>
+  <p>Mostramos anuncios de Google AdMob, tanto recompensados como en formato banner. Para mostrarlos, AdMob puede acceder al identificador publicitario de tu dispositivo y a datos tecnicos como el modelo, el sistema operativo y tu direccion IP aproximada. Si estas en el Espacio Economico Europeo, el Reino Unido o Suiza, la primera vez que abres la app ves un formulario de consentimiento de Google (UMP) donde eliges que tratamiento autorizas; puedes revisarlo o retirarlo cuando quieras desde ese mismo formulario. Mas detalle sobre el uso que Google hace de estos datos en <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+  <h3>2.5 Permisos del dispositivo</h3>
+  <p>La app pide solo dos permisos al sistema operativo: acceso a internet y envio de notificaciones push. No pedimos ubicacion, contactos, camara, microfono ni acceso amplio al almacenamiento del dispositivo.</p>
   <div class="note">Zitro Network no recopila contrasenas. La autenticacion se realiza exclusivamente a traves de Google Sign-In (OAuth 2.0). Tampoco almacenamos claves privadas, frases semilla ni credenciales de billetera.</div>
 </section>
 
@@ -225,8 +231,8 @@ footer p { margin-bottom: 4px; }
   <h2 id="es-3">3. Base legal y finalidad</h2>
   <p>Tratamos tus datos personales conforme a las siguientes bases legales:</p>
   <ul>
-    <li>Ejecucion contractual: para prestar el servicio de mineria en la nube por celulares moviles (que no afecta ni consume recursos de tu dispositivo), gestionar tu cuenta y procesar bonificaciones de referidos.</li>
-    <li>Consentimiento: para el envio de notificaciones push y comunicaciones de marketing.</li>
+    <li>Ejecucion contractual: para prestar el servicio de mineria en la nube, gestionar tu cuenta y procesar bonificaciones de referidos.</li>
+    <li>Consentimiento: para el envio de notificaciones push, comunicaciones de marketing y, si estas en el Espacio Economico Europeo, el Reino Unido o Suiza, para el uso de identificadores publicitarios por parte de Google AdMob.</li>
     <li>Interes legitimo: para detectar fraude, prevenir abusos (multi-accounting, farming) y mejorar la seguridad de la plataforma.</li>
     <li>Obligacion legal: para cumplir con requerimientos normativos aplicables.</li>
   </ul>
@@ -250,25 +256,21 @@ footer p { margin-bottom: 4px; }
   <ul>
     <li>Google (autenticacion mediante Google Sign-In)</li>
     <li>Firebase / Google Cloud (notificaciones push, infraestructura)</li>
+    <li>Google AdMob (anuncios recompensados y banners; recibe el identificador publicitario del dispositivo, ver seccion 2.4)</li>
     <li>WalletConnect / Reown (protocolo de conexion de billetera; solo se transmite la direccion publica)</li>
     <li>Binance Smart Chain (lectura de balances publicos on-chain)</li>
   </ul>
-  <p>No vendemos, alquilamos ni compartimos datos personales con terceros con fines publicitarios ni de marketing.</p>
+  <p>No vendemos ni alquilamos datos personales a terceros. No integramos herramientas de analitica de terceros: no usamos Firebase Analytics, Facebook SDK, AppsFlyer ni Sentry.</p>
 </section>
 
 <section>
   <h2 id="es-6">6. Transferencias internacionales</h2>
-  <p>Tus datos pueden transferirse y almacenarse en servidores ubicados fuera de tu pais de residencia. Cuando esto ocurra, nos aseguraremos de que existan salvaguardas adecuadas conforme al GDPR, como clausulas contractuales tipo de la Comision Europea o decisiones de adecuacion.</p>
+  <p>Tus datos se almacenan y procesan en servidores ubicados en la Union Europea. Si en el futuro trasladamos el tratamiento a un proveedor fuera de la Union Europea, aplicaremos las salvaguardas que exige el GDPR, como clausulas contractuales tipo de la Comision Europea o una decision de adecuacion, y actualizaremos esta politica antes de que el cambio entre en vigor.</p>
 </section>
 
 <section>
   <h2 id="es-7">7. Retencion de datos</h2>
-  <p>Conservamos tus datos personales mientras tu cuenta permanezca activa. Tras la eliminacion de la cuenta:</p>
-  <ul>
-    <li>Los datos personales se eliminan en un plazo maximo de 30 dias.</li>
-    <li>Registros anonimizados con fines estadisticos pueden conservarse indefinidamente.</li>
-    <li>Los datos necesarios para cumplir obligaciones legales se conservan durante el plazo legalmente establecido.</li>
-  </ul>
+  <p>Conservamos tus datos personales mientras tu cuenta permanezca activa. Puedes pedir la eliminacion de tu cuenta escribiendo a <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>; una vez confirmada la solicitud, eliminamos tus datos personales en el plazo que exige el GDPR, un maximo de 30 dias. Los tokens de notificaciones push de dispositivos inactivos se eliminan automaticamente a los 90 dias de inactividad. Los registros anonimizados con fines estadisticos, que ya no identifican a una persona, pueden conservarse indefinidamente. Los datos que debemos conservar por obligacion legal se retienen durante el plazo que esa norma establezca.</p>
 </section>
 
 <section>
@@ -277,9 +279,11 @@ footer p { margin-bottom: 4px; }
   <ul>
     <li>Comunicaciones cifradas mediante HTTPS/TLS en todas las conexiones.</li>
     <li>Autenticacion delegada a Google OAuth 2.0 (no almacenamos contrasenas).</li>
-    <li>Autorizacion mediante tokens JWT con expiracion controlada.</li>
+    <li>Autorizacion mediante tokens JWT con expiracion controlada, almacenados cifrados en el almacen seguro del sistema (Android Keystore / iOS Keychain).</li>
     <li>Firma HMAC en endpoints criticos.</li>
     <li>Vinculacion de billetera mediante firma criptografica SIWE, verificada en el servidor.</li>
+    <li>Deteccion de dispositivos con root o jailbreak, para bloquear el acceso desde entornos comprometidos.</li>
+    <li>No registramos tu direccion IP ni tu user-agent en nuestra base de datos.</li>
     <li>Infraestructura con acceso restringido y monitoreado.</li>
   </ul>
 </section>
@@ -303,7 +307,7 @@ footer p { margin-bottom: 4px; }
     <li>Derecho a la no discriminacion por ejercer tus derechos de privacidad.</li>
     <li>No vendemos datos personales conforme a la definicion de la CCPA.</li>
   </ul>
-  <p>Para ejercer cualquiera de estos derechos, contacta a <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>. Responderemos en un plazo maximo de 30 dias.</p>
+  <p>Para ejercer cualquiera de estos derechos, contacta a <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>. Responderemos en un plazo maximo de 30 dias.</p>
 </section>
 
 <section>
@@ -318,7 +322,7 @@ footer p { margin-bottom: 4px; }
     <li>Mantener la sesion del usuario (token JWT).</li>
     <li>Guardar preferencias de idioma y tema visual.</li>
   </ul>
-  <p>No utilizamos tecnologias de seguimiento de terceros con fines publicitarios.</p>
+  <p>Google AdMob, que integramos para mostrar anuncios, usa el identificador publicitario de tu dispositivo con fines de segmentacion y medicion (ver seccion 2.4). Si estas en el Espacio Economico Europeo, el Reino Unido o Suiza, puedes gestionar o retirar tu consentimiento sobre este uso desde el formulario que ves al abrir la app; tambien puedes limitarlo desde la configuracion de anuncios de tu dispositivo Android o iOS.</p>
 </section>
 
 <section>
@@ -330,7 +334,7 @@ footer p { margin-bottom: 4px; }
   <h2 id="es-13">13. Contacto</h2>
   <p>Para consultas sobre privacidad o ejercicio de derechos:</p>
   <ul>
-    <li>Email: <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a></li>
+    <li>Email: <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a></li>
     <li>Web: <a href="https://zitronetwork.com">zitronetwork.com</a></li>
   </ul>
 </section>
@@ -361,7 +365,7 @@ footer p { margin-bottom: 4px; }
 <section>
   <h2 id="en-1">1. Data controller</h2>
   <p>Zitro Network is the data controller for personal data collected through the Zitro Network mobile application and associated services.</p>
-  <p>For any privacy-related inquiries, contact us at <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>.</p>
+  <p>For any privacy-related inquiries, contact us at <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>.</p>
 </section>
 
 <section>
@@ -376,16 +380,22 @@ footer p { margin-bottom: 4px; }
   <h3>2.2 Data generated through service usage</h3>
   <ul>
     <li>Internal account identifier (UUID and numeric ID)</li>
+    <li>Installation identifier, generated once per device</li>
     <li>Account status (active, suspended, banned)</li>
-    <li>Cloud-based mobile mining statistics (ZITRO token balance, mining rate)</li>
+    <li>ZITRO token balance and cloud mining rate: mining runs on our servers and does not use your phone's battery, processor, or mobile data</li>
     <li>Academy progress and language preferences</li>
-    <li>Push notification tokens (Firebase Cloud Messaging)</li>
+    <li>Push notification token (Firebase Cloud Messaging), together with your device platform (Android or iOS) and your notification permission status</li>
     <li>Own referral code and referral history</li>
+    <li>A device integrity signal (root or jailbreak detection) that we use to prevent fraud and platform abuse</li>
   </ul>
   <h3>2.3 Web3 wallet data</h3>
   <ul>
     <li>Public wallet address linked via SIWE cryptographic signature</li>
   </ul>
+  <h3>2.4 Advertising data</h3>
+  <p>We show ads from Google AdMob, both rewarded and banner format. To serve them, AdMob can access your device's advertising identifier and technical data such as device model, operating system, and approximate IP address. If you are in the European Economic Area, the United Kingdom, or Switzerland, the first time you open the app you see a Google consent form (UMP) where you choose what processing to allow; you can review or withdraw that consent at any time from the same form. Read more about how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+  <h3>2.5 Device permissions</h3>
+  <p>The app asks the operating system for only two permissions: internet access and sending push notifications. We do not ask for location, contacts, camera, microphone, or broad storage access.</p>
   <div class="note">Zitro Network does not collect passwords. Authentication is performed exclusively through Google Sign-In (OAuth 2.0). We do not store private keys, seed phrases, or wallet credentials.</div>
 </section>
 
@@ -393,8 +403,8 @@ footer p { margin-bottom: 4px; }
   <h2 id="en-3">3. Legal basis and purpose</h2>
   <p>We process your personal data under the following legal bases:</p>
   <ul>
-    <li>Contractual performance: to provide the cloud-based mobile mining service (which does not affect or consume your device's resources), manage your account, and process referral bonuses.</li>
-    <li>Consent: for sending push notifications and marketing communications.</li>
+    <li>Contractual performance: to provide the cloud mining service, manage your account, and process referral bonuses.</li>
+    <li>Consent: for sending push notifications, marketing communications, and, if you are in the European Economic Area, the United Kingdom, or Switzerland, for Google AdMob's use of advertising identifiers.</li>
     <li>Legitimate interest: to detect fraud, prevent abuse (multi-accounting, farming), and improve platform security.</li>
     <li>Legal obligation: to comply with applicable regulatory requirements.</li>
   </ul>
@@ -418,25 +428,21 @@ footer p { margin-bottom: 4px; }
   <ul>
     <li>Google (authentication via Google Sign-In)</li>
     <li>Firebase / Google Cloud (push notifications, infrastructure)</li>
+    <li>Google AdMob (rewarded and banner ads; receives the device's advertising identifier, see section 2.4)</li>
     <li>WalletConnect / Reown (wallet connection protocol; only the public address is transmitted)</li>
     <li>Binance Smart Chain (public on-chain balance reads)</li>
   </ul>
-  <p>We do not sell, rent, or share personal data with third parties for advertising or marketing purposes.</p>
+  <p>We do not sell or rent personal data to third parties. We do not integrate third-party analytics tools: we do not use Firebase Analytics, the Facebook SDK, AppsFlyer, or Sentry.</p>
 </section>
 
 <section>
   <h2 id="en-6">6. International transfers</h2>
-  <p>Your data may be transferred to and stored on servers located outside your country of residence. When this occurs, we ensure adequate safeguards are in place in accordance with the GDPR, such as European Commission standard contractual clauses or adequacy decisions.</p>
+  <p>Your data is stored and processed on servers located in the European Union. If we move processing to a provider outside the European Union in the future, we will apply the safeguards required by the GDPR, such as European Commission standard contractual clauses or an adequacy decision, and we will update this policy before the change takes effect.</p>
 </section>
 
 <section>
   <h2 id="en-7">7. Data retention</h2>
-  <p>We retain your personal data while your account remains active. After account deletion:</p>
-  <ul>
-    <li>Personal data is deleted within a maximum of 30 days.</li>
-    <li>Anonymized records for statistical purposes may be retained indefinitely.</li>
-    <li>Data required to comply with legal obligations is retained for the legally mandated period.</li>
-  </ul>
+  <p>We retain your personal data while your account remains active. You can request deletion of your account by writing to <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>; once we confirm the request, we delete your personal data within the timeframe required by the GDPR, a maximum of 30 days. Push notification tokens for inactive devices are deleted automatically after 90 days of inactivity. Anonymized records for statistical purposes, which no longer identify a person, may be retained indefinitely. Data we must keep for legal obligations is retained for the period that obligation requires.</p>
 </section>
 
 <section>
@@ -445,9 +451,11 @@ footer p { margin-bottom: 4px; }
   <ul>
     <li>Encrypted communications via HTTPS/TLS on all connections.</li>
     <li>Authentication delegated to Google OAuth 2.0 (no passwords stored).</li>
-    <li>Authorization via JWT tokens with controlled expiration.</li>
+    <li>Authorization via JWT tokens with controlled expiration, stored encrypted in the system's secure storage (Android Keystore / iOS Keychain).</li>
     <li>HMAC signing on critical endpoints.</li>
     <li>Wallet linking via SIWE cryptographic signature, verified server-side.</li>
+    <li>Detection of rooted or jailbroken devices, to block access from compromised environments.</li>
+    <li>We do not log your IP address or user agent in our database.</li>
     <li>Infrastructure with restricted and monitored access.</li>
   </ul>
 </section>
@@ -471,7 +479,7 @@ footer p { margin-bottom: 4px; }
     <li>Right to non-discrimination for exercising your privacy rights.</li>
     <li>We do not sell personal data as defined by the CCPA.</li>
   </ul>
-  <p>To exercise any of these rights, contact <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a>. We will respond within 30 days.</p>
+  <p>To exercise any of these rights, contact <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a>. We will respond within 30 days.</p>
 </section>
 
 <section>
@@ -486,7 +494,7 @@ footer p { margin-bottom: 4px; }
     <li>Maintaining the user session (JWT token).</li>
     <li>Storing language and visual theme preferences.</li>
   </ul>
-  <p>We do not use third-party tracking technologies for advertising purposes.</p>
+  <p>Google AdMob, which we integrate to show ads, uses your device's advertising identifier for targeting and measurement (see section 2.4). If you are in the European Economic Area, the United Kingdom, or Switzerland, you can manage or withdraw your consent to this use from the form you see when you open the app; you can also limit it from your Android or iOS device's ad settings.</p>
 </section>
 
 <section>
@@ -498,7 +506,7 @@ footer p { margin-bottom: 4px; }
   <h2 id="en-13">13. Contact</h2>
   <p>For privacy inquiries or to exercise your rights:</p>
   <ul>
-    <li>Email: <a href="mailto:privacy@zitronetwork.com">privacy@zitronetwork.com</a></li>
+    <li>Email: <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a></li>
     <li>Web: <a href="https://zitronetwork.com">zitronetwork.com</a></li>
   </ul>
 </section>
@@ -507,7 +515,7 @@ footer p { margin-bottom: 4px; }
 
 <footer>
   <p>Zitro Network</p>
-  <p>Version 2.0 &middot; 30 de junio de 2026</p>
+  <p>Version 2.1 &middot; 16 de septiembre de 2026</p>
 </footer>
 
 </div>
