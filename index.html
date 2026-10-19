@@ -162,7 +162,7 @@ footer p { margin-bottom: 4px; }
 
 <header>
   <h1>Política de Privacidad</h1>
-  <p>Zitro Network &middot; Versión 3.0 &middot; Fecha de vigencia: 28 de septiembre de 2026 &middot; Última actualización: 28 de septiembre de 2026</p>
+  <p>Zitro Network &middot; Versión 3.1 &middot; Fecha de vigencia: 19 de octubre de 2026 &middot; Última actualización: 19 de octubre de 2026</p>
   <div class="lang-switch">
     <button class="active" onclick="setLang('es')">ES</button>
     <button onclick="setLang('en')">EN</button>
@@ -218,6 +218,7 @@ footer p { margin-bottom: 4px; }
     <li>Preferencias de idioma y de tema visual.</li>
     <li>Datos de notificaciones: el token de Firebase Cloud Messaging, un identificador de instalación de la app, la plataforma (Android o iOS) y el estado del permiso de notificaciones.</li>
   </ul>
+  <p>Tu nombre de usuario es visible para otros usuarios en el ranking y en la red de referidos, y aparece en los avisos que envíes a tus referidos. Las fotos de perfil de otros usuarios no se muestran en esas secciones.</p>
   <h3>2.4 Identificador del dispositivo y datos de seguridad</h3>
   <ul>
     <li>Identificador del dispositivo: en Android, el identificador que el sistema asigna a la app (Android ID); en iOS, el identificador de proveedor. La app lo envía con cada solicitud y lo usamos para vincular tus sesiones al dispositivo y para detectar varias cuentas creadas desde un mismo dispositivo. En nuestra base de datos lo guardamos solo en forma de hash.</li>
@@ -232,10 +233,10 @@ footer p { margin-bottom: 4px; }
   <h3>2.7 Código de invitación de Google Play</h3>
   <p>Si instalas la app desde un enlace de invitación, la app lee una única vez el dato de referencia de instalación que proporciona Google Play (Install Referrer) para recuperar el código de invitación. Solo enviamos a nuestros servidores ese código, cuando completas tu registro.</p>
   <h3>2.8 Billeteras externas</h3>
-  <p>La versión actual de la app no permite vincular billeteras de criptomonedas externas ni consulta saldos en blockchain. Si en el futuro se habilita una función de ese tipo, actualizaremos esta política antes de que esté disponible.</p>
+  <p>La app incluye una sección Billetera, pero la conexión de billeteras externas no está habilitada en la versión actual. No vinculamos billeteras de criptomonedas y no recopilamos direcciones de billeteras ni saldos en blockchain. Si en el futuro se habilita una función de ese tipo, actualizaremos esta política antes de que esté disponible.</p>
   <h3>2.9 Permisos del dispositivo</h3>
-  <p>El único permiso que la app te pide aprobar es el de enviar notificaciones. Además, la app declara permisos técnicos que el sistema concede sin preguntarte: acceso a internet y al estado de la red, acceso al identificador publicitario, mantener el dispositivo activo y vibrar al recibir notificaciones, y consultar la referencia de instalación de Google Play. No pedimos ubicación, contactos, cámara, micrófono ni acceso amplio al almacenamiento. Para detectar herramientas de manipulación o malware, freeRASP puede ver qué aplicaciones instaladas en el dispositivo pueden abrirse desde la pantalla de inicio.</p>
-  <div class="note">Zitro Network no recopila contraseñas. La autenticación se realiza exclusivamente a través de Google Sign-In. No integramos herramientas de analítica de terceros: no usamos Firebase Analytics, Facebook SDK, AppsFlyer, Sentry ni Crashlytics.</div>
+  <p>El único permiso que la app te pide aprobar es el de enviar notificaciones. Además, la app declara permisos técnicos que el sistema concede sin preguntarte: acceso a internet y al estado de la red, acceso al identificador publicitario, mantener el dispositivo activo y vibrar al recibir notificaciones, consultar la referencia de instalación de Google Play, y permisos que agregan las bibliotecas de Google y de almacenamiento seguro: estado del Wi-Fi, servicios de publicidad de Android (Privacy Sandbox), servicio en primer plano del sistema y acceso a biometría del almacén seguro (la app no te pide huella). No pedimos ubicación, contactos, cámara, micrófono ni acceso amplio al almacenamiento. Para detectar herramientas de manipulación o malware, freeRASP puede ver qué aplicaciones instaladas en el dispositivo pueden abrirse desde la pantalla de inicio.</p>
+  <div class="note">Zitro Network no recopila contraseñas. La autenticación se realiza exclusivamente a través de Google Sign-In. No integramos herramientas de analítica de terceros: no usamos Firebase Analytics, Facebook SDK, AppsFlyer ni Sentry. Para detectar errores de la app sí usamos Firebase Crashlytics (sección 4).</div>
 </section>
 
 <section>
@@ -254,7 +255,8 @@ footer p { margin-bottom: 4px; }
   <p>Compartimos datos personales únicamente con los siguientes proveedores, en la medida necesaria para operar el servicio:</p>
   <ul>
     <li><strong>Google Sign-In</strong> (Google): autenticación. Recibimos de Google tu correo, el identificador de tu cuenta y tu foto de perfil.</li>
-    <li><strong>Firebase Cloud Messaging</strong> (Google): envío de notificaciones push. Procesa el token de notificaciones y el identificador de instalación de Firebase. Es el único servicio de Firebase que usamos.</li>
+    <li><strong>Firebase Cloud Messaging</strong> (Google): envío de notificaciones push. Procesa el token de notificaciones y el identificador de instalación de Firebase.</li>
+    <li><strong>Firebase Crashlytics</strong> (Google): informes de errores de la app. Recibe el texto del error, el stack trace, la versión de la app, el modelo y el sistema operativo del dispositivo y un identificador de instalación. No recibe tu correo, tu nombre de usuario ni tu saldo.</li>
     <li><strong>Google AdMob y la plataforma de consentimiento de Google (UMP)</strong>: anuncios recompensados y banners, y gestión del consentimiento. Procesan el identificador publicitario, datos técnicos del dispositivo y la dirección IP (sección 2.6).</li>
     <li><strong>Google Play Integrity</strong>: verifica que la app sea la versión original instalada desde Google Play y que el dispositivo cumpla los requisitos de integridad. Google recibe una solicitud de verificación vinculada a tu sesión y a tu dispositivo, y nuestro servidor recibe su resultado.</li>
     <li><strong>Google Play Install Referrer</strong>: proporciona el código de invitación cuando instalas la app desde un enlace de invitación (sección 2.7).</li>
@@ -286,7 +288,7 @@ footer p { margin-bottom: 4px; }
 <section>
   <h2 id="es-7">7. Retención y eliminación de datos</h2>
   <p>Conservamos tus datos personales mientras tu cuenta permanezca activa.</p>
-  <p>Puedes eliminar tu cuenta desde la app (menú → “Eliminar cuenta”, confirmando con tu nombre de usuario). La eliminación es inmediata: se borran tu perfil, tu foto, tu saldo e historial de ZTR, tus sesiones de minería, tu progreso en la Academia y tus tokens de notificaciones, y se cierran todas tus sesiones. Si ya no tienes la app, puedes pedir la eliminación escribiendo a <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a> desde el correo asociado a tu cuenta; la procesaremos en un máximo de 30 días.</p>
+  <p>Puedes eliminar tu cuenta desde la app (menú → “Eliminar cuenta”, confirmando con tu nombre de usuario) o desde <a href="https://www.zitronetwork.com/eliminar-cuenta">www.zitronetwork.com/eliminar-cuenta</a>. Desde la app, la eliminación es inmediata: se borran tu perfil, tu foto, tu saldo e historial de ZTR, tus sesiones de minería, tu progreso en la Academia y tus tokens de notificaciones, y se cierran todas tus sesiones. Si ya no tienes la app, puedes pedir la eliminación escribiendo a <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a> desde el correo asociado a tu cuenta; la procesaremos en un máximo de 30 días.</p>
   <p>Tras la eliminación se conservan únicamente:</p>
   <ul>
     <li>El identificador interno de tu cuenta, sin tus datos personales, en los registros de cálculo de bonos de referidos de otros usuarios y en los registros de auditoría de acciones administrativas.</li>
@@ -351,7 +353,8 @@ footer p { margin-bottom: 4px; }
   <p>Podemos actualizar esta política. En caso de cambios sustanciales, notificaremos a los usuarios mediante la app, y la fecha de última actualización figura al comienzo de este documento. El uso continuado tras la publicación de cambios constituye aceptación.</p>
   <h3>Historial de cambios</h3>
   <ul>
-    <li><strong>3.0 — 28 de septiembre de 2026 (fecha de vigencia).</strong> Se agregan Talsec (freeRASP), Google Play Integrity, Google Play Install Referrer, YouTube y Cloudflare como proveedores; el identificador del dispositivo y el tratamiento de la dirección IP; la eliminación de cuenta desde la app y lo que se conserva después; los permisos técnicos de la app. Se aclara que la versión actual no permite vincular billeteras externas.</li>
+    <li><strong>3.1 — 19 de octubre de 2026 (fecha de vigencia).</strong> Se agrega Firebase Crashlytics (informes de errores) como proveedor; se completan los permisos técnicos de la app; se aclara qué datos son visibles para otros usuarios; se indica la página web para pedir la eliminación de la cuenta; se aclara que la sección Billetera existe pero la conexión de billeteras externas no está habilitada.</li>
+    <li><strong>3.0 — 28 de septiembre de 2026.</strong> Se agregan Talsec (freeRASP), Google Play Integrity, Google Play Install Referrer, YouTube y Cloudflare como proveedores; el identificador del dispositivo y el tratamiento de la dirección IP; la eliminación de cuenta desde la app y lo que se conserva después; los permisos técnicos de la app. Se aclara que la versión actual no permite vincular billeteras externas.</li>
     <li><strong>2.1 — 16 de septiembre de 2026.</strong> Correcciones de contradicciones y datos faltantes.</li>
     <li><strong>2.0 — 30 de junio de 2026.</strong> Primera versión publicada.</li>
   </ul>
@@ -417,6 +420,7 @@ footer p { margin-bottom: 4px; }
     <li>Language and visual theme preferences.</li>
     <li>Notification data: the Firebase Cloud Messaging token, an app installation identifier, the platform (Android or iOS), and the notification permission status.</li>
   </ul>
+  <p>Your username is visible to other users in the ranking and in the referral network, and it appears in the notices you send to your referrals. Other users' profile photos are not shown in those sections.</p>
   <h3>2.4 Device identifier and security data</h3>
   <ul>
     <li>Device identifier: on Android, the identifier the system assigns to the app (Android ID); on iOS, the identifier for vendor. The app sends it with every request, and we use it to bind your sessions to the device and to detect multiple accounts created from the same device. In our database we store it only as a hash.</li>
@@ -431,10 +435,10 @@ footer p { margin-bottom: 4px; }
   <h3>2.7 Google Play invitation code</h3>
   <p>If you install the app from an invitation link, the app reads the install referrer data provided by Google Play (Install Referrer) once, to recover the invitation code. We only send that code to our servers, when you complete your registration.</p>
   <h3>2.8 External wallets</h3>
-  <p>The current version of the app does not allow linking external cryptocurrency wallets and does not query blockchain balances. If such a feature is enabled in the future, we will update this policy before it becomes available.</p>
+  <p>The app includes a Wallet section, but connecting external wallets is not enabled in the current version. We do not link cryptocurrency wallets and we do not collect wallet addresses or blockchain balances. If such a feature is enabled in the future, we will update this policy before it becomes available.</p>
   <h3>2.9 Device permissions</h3>
-  <p>The only permission the app asks you to approve is sending notifications. The app also declares technical permissions that the system grants without asking you: internet and network state access, access to the advertising identifier, keeping the device awake and vibrating when notifications arrive, and reading the Google Play install referrer. We do not ask for location, contacts, camera, microphone, or broad storage access. To detect tampering tools or malware, freeRASP can see which installed apps can be opened from the home screen.</p>
-  <div class="note">Zitro Network does not collect passwords. Authentication is performed exclusively through Google Sign-In. We do not integrate third-party analytics tools: we do not use Firebase Analytics, the Facebook SDK, AppsFlyer, Sentry, or Crashlytics.</div>
+  <p>The only permission the app asks you to approve is sending notifications. The app also declares technical permissions that the system grants without asking you: internet and network state access, access to the advertising identifier, keeping the device awake and vibrating when notifications arrive, reading the Google Play install referrer, and permissions added by Google and secure-storage libraries: Wi-Fi state, Android advertising services (Privacy Sandbox), the system foreground service, and secure-storage access to biometrics (the app does not ask for your fingerprint). We do not ask for location, contacts, camera, microphone, or broad storage access. To detect tampering tools or malware, freeRASP can see which installed apps can be opened from the home screen.</p>
+  <div class="note">Zitro Network does not collect passwords. Authentication is performed exclusively through Google Sign-In. We do not integrate third-party analytics tools: we do not use Firebase Analytics, the Facebook SDK, AppsFlyer, or Sentry. To detect app errors we do use Firebase Crashlytics (Section 4).</div>
 </section>
 
 <section>
@@ -453,7 +457,8 @@ footer p { margin-bottom: 4px; }
   <p>We share personal data only with the following providers, to the extent necessary to operate the service:</p>
   <ul>
     <li><strong>Google Sign-In</strong> (Google): authentication. We receive your email, account identifier, and profile photo from Google.</li>
-    <li><strong>Firebase Cloud Messaging</strong> (Google): push notifications. It processes the notification token and the Firebase installation identifier. It is the only Firebase service we use.</li>
+    <li><strong>Firebase Cloud Messaging</strong> (Google): push notifications. It processes the notification token and the Firebase installation identifier.</li>
+    <li><strong>Firebase Crashlytics</strong> (Google): app error reports. It receives the error text, the stack trace, the app version, the device model and operating system, and an installation identifier. It does not receive your email, your username, or your balance.</li>
     <li><strong>Google AdMob and Google's consent platform (UMP)</strong>: rewarded and banner ads, and consent management. They process the advertising identifier, device technical data, and IP address (Section 2.6).</li>
     <li><strong>Google Play Integrity</strong>: verifies that the app is the original version installed from Google Play and that the device meets integrity requirements. Google receives a verification request bound to your session and device, and our server receives its result.</li>
     <li><strong>Google Play Install Referrer</strong>: provides the invitation code when you install the app from an invitation link (Section 2.7).</li>
@@ -485,7 +490,7 @@ footer p { margin-bottom: 4px; }
 <section>
   <h2 id="en-7">7. Data retention and deletion</h2>
   <p>We retain your personal data while your account remains active.</p>
-  <p>You can delete your account from the app (menu → “Delete account”, confirming with your username). Deletion is immediate: your profile, photo, ZTR balance and history, mining sessions, Academy progress, and notification tokens are deleted, and all your sessions are closed. If you no longer have the app, you can request deletion by writing to <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a> from the email address associated with your account; we will process it within a maximum of 30 days.</p>
+  <p>You can delete your account from the app (menu → “Delete account”, confirming with your username) or from <a href="https://www.zitronetwork.com/eliminar-cuenta">www.zitronetwork.com/eliminar-cuenta</a>. From the app, deletion is immediate: your profile, photo, ZTR balance and history, mining sessions, Academy progress, and notification tokens are deleted, and all your sessions are closed. If you no longer have the app, you can request deletion by writing to <a href="mailto:privacidad@zitronetwork.com">privacidad@zitronetwork.com</a> from the email address associated with your account; we will process it within a maximum of 30 days.</p>
   <p>After deletion, we retain only:</p>
   <ul>
     <li>Your internal account identifier, without your personal data, in other users' referral bonus calculation records and in administrative action audit logs.</li>
@@ -550,7 +555,8 @@ footer p { margin-bottom: 4px; }
   <p>We may update this policy. For material changes, we will notify users through the app, and the last updated date appears at the top of this document. Continued use after changes are published constitutes acceptance.</p>
   <h3>Change history</h3>
   <ul>
-    <li><strong>3.0 — September 28, 2026 (effective date).</strong> Adds Talsec (freeRASP), Google Play Integrity, Google Play Install Referrer, YouTube, and Cloudflare as providers; the device identifier and IP address handling; in-app account deletion and what is retained afterwards; the app's technical permissions. Clarifies that the current version does not allow linking external wallets.</li>
+    <li><strong>3.1 — October 19, 2026 (effective date).</strong> Adds Firebase Crashlytics (error reports) as a provider; completes the app's technical permissions; clarifies which data is visible to other users; adds the web page to request account deletion; clarifies that the Wallet section exists but connecting external wallets is not enabled.</li>
+    <li><strong>3.0 — September 28, 2026.</strong> Adds Talsec (freeRASP), Google Play Integrity, Google Play Install Referrer, YouTube, and Cloudflare as providers; the device identifier and IP address handling; in-app account deletion and what is retained afterwards; the app's technical permissions. Clarifies that the current version does not allow linking external wallets.</li>
     <li><strong>2.1 — September 16, 2026.</strong> Fixes to contradictions and missing disclosures.</li>
     <li><strong>2.0 — June 30, 2026.</strong> First published version.</li>
   </ul>
@@ -569,7 +575,7 @@ footer p { margin-bottom: 4px; }
 
 <footer>
   <p>Zitro Network</p>
-  <p>Versión 3.0 &middot; Fecha de vigencia: 28 de septiembre de 2026</p>
+  <p>Versión 3.1 &middot; Fecha de vigencia: 19 de octubre de 2026</p>
 </footer>
 
 </div>
